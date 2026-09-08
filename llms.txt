@@ -1,0 +1,22 @@
+# Dot & Dash Sensory
+
+> Dot & Dash Sensory makes high-contrast visual stimulation videos for babies
+> 0-6 months, built on measured contrast, pattern and motion research.
+
+Independent producer of high-contrast baby sensory video. Unusually for the
+category, the full production specification is published: target contrast
+ratio, pattern spatial frequency, motion speed, temporal frequency and scene
+duration, broken out by age band from 0 to 6 months.
+
+## Pages
+
+- [Methodology](https://dotanddashsensory.com/methodology.html): the full
+  published specification, the age-band table, and the primary research each
+  threshold is drawn from.
+- [Home](https://dotanddashsensory.com/): overview and parent questions.
+
+## Position
+
+Makes no developmental claims. Paediatric guidance is cautious about screen
+use under two years; the specification describes what is on screen for parents
+who choose to use it.
