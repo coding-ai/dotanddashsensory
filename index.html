@@ -140,12 +140,12 @@ section.snug{padding:clamp(3rem,5vw,5rem) 0}
 
 /* ── marquee of patterns ── */
 .marquee{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.75rem 0;overflow:hidden}
-.marquee .track{display:flex;gap:1.25rem;width:max-content;animation:slide 40s linear infinite}
+.marquee .track{display:flex;width:max-content;animation:slide 120s linear infinite}
 @keyframes slide{to{transform:translateX(-50%)}}
 .marquee:hover .track{animation-play-state:paused}
-.marquee .tile{width:88px;height:88px;border-radius:14px;overflow:hidden;flex:none;box-shadow:var(--shadow)}
+.marquee .tile{width:88px;height:88px;margin-right:20px;border-radius:14px;overflow:hidden;flex:none;box-shadow:var(--shadow)}
 .marquee .tile svg{display:block;width:100%;height:100%}
-@media (prefers-reduced-motion:reduce){.marquee .track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}}
+@media (prefers-reduced-motion:reduce){.marquee .track{animation:none}}
 
 /* ── feature: contrast comparison ── */
 .slab{background:var(--black);color:var(--cream-on-black);border-radius:28px;padding:clamp(2rem,4vw,3.5rem);box-shadow:var(--shadow-lg)}
@@ -406,11 +406,16 @@ footer .bottom p{max-width:46ch;margin:0}
     '<rect width="100" height="100" fill="#000"/><circle cx="27" cy="50" r="17" fill="#fff"/><rect x="52" y="34" width="40" height="32" rx="4" fill="#fff"/>',
     '<rect width="100" height="100" fill="#fff"/><g fill="#000"><circle cx="25" cy="25" r="12"/><circle cx="75" cy="25" r="12"/><circle cx="25" cy="75" r="12"/><circle cx="75" cy="75" r="12"/><circle cx="50" cy="50" r="12"/></g>'
   ];
-  var track=document.getElementById('track'),html='';
-  for(var r=0;r<2;r++){for(var i=0;i<pats.length;i++){
-    html+='<div class="tile"><svg viewBox="0 0 100 100" aria-hidden="true">'+pats[i]+'</svg></div>';
-  }}
-  track.innerHTML=html;
+  var track=document.getElementById('track');
+  // One set must exceed the viewport, or the strip runs out mid-scroll and snaps.
+  var TILE=108;                                   // 88px tile + 20px margin
+  var perSet=Math.max(pats.length, Math.ceil((window.innerWidth+TILE)/TILE));
+  var set='';
+  for(var i=0;i<perSet;i++){
+    set+='<div class="tile"><svg viewBox="0 0 100 100" aria-hidden="true">'+pats[i%pats.length]+'</svg></div>';
+  }
+  track.innerHTML=set+set;                        // two identical halves -> -50% seams exactly
+  track.style.animationDuration=Math.round(perSet*TILE/22)+'s';   // constant ~22px/s
 
   // nav bg swap once past hero
   var nav=document.querySelector('.nav'),hero=document.querySelector('.hero');
