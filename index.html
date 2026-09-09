@@ -410,11 +410,11 @@ footer .bottom p{max-width:46ch;margin:0}
   // One set must exceed the viewport, or the strip runs out mid-scroll and snaps.
   var TILE=108;                                   // 88px tile + 20px margin
   var perSet=Math.max(pats.length, Math.ceil((window.innerWidth+TILE)/TILE));
-  var set='';
+  var tileHtml='';                                // NB: not `set` — that name is the age-button fn
   for(var i=0;i<perSet;i++){
-    set+='<div class="tile"><svg viewBox="0 0 100 100" aria-hidden="true">'+pats[i%pats.length]+'</svg></div>';
+    tileHtml+='<div class="tile"><svg viewBox="0 0 100 100" aria-hidden="true">'+pats[i%pats.length]+'</svg></div>';
   }
-  track.innerHTML=set+set;                        // two identical halves -> -50% seams exactly
+  track.innerHTML=tileHtml+tileHtml;              // two identical halves -> -50% seams exactly
   track.style.animationDuration=Math.round(perSet*TILE/22)+'s';   // constant ~22px/s
 
   // nav bg swap once past hero
