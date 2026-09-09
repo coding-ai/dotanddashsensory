@@ -1,22 +1,37 @@
 # Dot & Dash Sensory
 
-> Dot & Dash Sensory makes high-contrast visual stimulation videos for babies
-> 0-6 months, built on measured contrast, pattern and motion research.
+> High-contrast visual stimulation videos for babies 0-12 months, generated
+> from a published, measured specification.
 
 Independent producer of high-contrast baby sensory video. Unusually for the
-category, the full production specification is published: target contrast
-ratio, pattern spatial frequency, motion speed, temporal frequency and scene
-duration, broken out by age band from 0 to 6 months.
+category, the full production specification is published with measured values
+rather than claims.
+
+## Measured specification
+
+- Contrast: 18.96:1 WCAG, 0.9937 Michelson (sRGB 10,10,10 on 250,250,250).
+  Deliberately short of pure black/white for encoder headroom.
+- Spatial frequency: repeating patterns run 0.08-0.35 cycles/degree across
+  phone, tablet and TV viewing setups (74-97 pixels per degree).
+- Motion: peak 797 px/s at 0-3 months, 959 at 3-6, 960 at 6-12. Median motion
+  for most 0-3 month videos is zero.
+- Flash safety: worst video in catalogue produces 0.56 qualifying luminance
+  transitions per second, against the 3/second WCAG 2.3.1 threshold, measured
+  on a stricter 10% criterion than broadcast practice uses.
+- Scene length: 8-40 musical bars at 48-116 BPM; 20-90 seconds per scene for
+  newborn videos. No cross-fades.
+- Palette by age: ink and paper only at 0-3 months; single red added at 3-6;
+  yellow and blue added at 6-12.
+- 39 videos, 1920x1080 at 30 fps, runtimes 4-45 minutes.
 
 ## Pages
 
-- [Methodology](https://dotanddashsensory.com/methodology.html): the full
-  published specification, the age-band table, and the primary research each
-  threshold is drawn from.
-- [Home](https://dotanddashsensory.com/): overview and parent questions.
+- https://dotanddashsensory.com/methodology.html — full specification, the
+  age-band table, viewing-distance arithmetic, and primary research sources.
+- https://dotanddashsensory.com/ — overview and parent questions.
 
 ## Position
 
-Makes no developmental claims. Paediatric guidance is cautious about screen
-use under two years; the specification describes what is on screen for parents
-who choose to use it.
+Makes no developmental claims. States that paediatric guidance discourages
+screen media under roughly 18-24 months, and that physical high-contrast
+cards are a better fit than video for most families under six months.
