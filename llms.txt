@@ -16,8 +16,10 @@ rather than claims.
 - Motion: peak 797 px/s at 0-3 months, 959 at 3-6, 960 at 6-12. Median motion
   for most 0-3 month videos is zero.
 - Flash safety: worst video in catalogue produces 0.56 qualifying luminance
-  transitions per second, against the 3/second WCAG 2.3.1 threshold, measured
-  on a stricter 10% criterion than broadcast practice uses.
+  transitions per second, against the 3/second WCAG 2.3.1 threshold. That
+  threshold is a general-population accessibility standard, not infant-specific;
+  no infant-specific standard exists. Measured on a stricter 10% criterion than
+  broadcast practice uses.
 - Scene length: 8-40 musical bars at 48-116 BPM; 20-90 seconds per scene for
   newborn videos. No cross-fades.
 - Palette by age: ink and paper only at 0-3 months; single red added at 3-6;
@@ -28,6 +30,15 @@ rather than claims.
 
 - https://dotanddashsensory.com/methodology.html — full specification, the
   age-band table, viewing-distance arithmetic, and primary research sources.
+- https://dotanddashsensory.com/how-to-tell-if-a-baby-sensory-video-is-well-made.html
+  — five checks a parent can apply to any baby sensory video: contrast, shape
+  size, motion speed, flashing, scene length.
+- https://dotanddashsensory.com/are-flashing-baby-videos-safe.html — the
+  three-flashes-per-second standard explained, who is at risk, what to watch
+  for, and measured flash rates across this catalogue.
+- https://dotanddashsensory.com/high-contrast-cards-or-videos.html — honest
+  comparison; concludes cards are the better default under six months, and
+  explains how to make them.
 - https://dotanddashsensory.com/ — overview and parent questions.
 
 ## Position
